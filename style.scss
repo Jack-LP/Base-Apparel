@@ -1,0 +1,128 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+// Primary Colours
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+
+// Neutral Colours
+$DarkGrayRed: hsl(0, 6%, 24%);
+
+// Font
+$MainFont: "Josefin Sans", sans-serif;
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $MainFont;
+    background: url(./images/bg-pattern-desktop.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+form{
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+input[type="email"]{
+    outline: none;
+    border: 1px solid $DesaturatedRed;
+    border-radius: 50px;
+    height: 60px;
+    width: 100%;
+    color: $DesaturatedRed;
+    padding-left: 30px;
+    font-size: 1.4rem;
+    font-family: $MainFont;
+}
+
+button[type="submit"]{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(245,182,182,1) 0%, rgba(240,147,147,1) 100%);
+    width: 100px;
+    margin-left: -99px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 
+    "text image";
+}
+
+.imageSection{
+    grid-area: image;
+    height: 100vh;
+    justify-self: flex-end;
+}
+
+.heroImage{
+    height: 100%;
+    display: block;
+}
+
+.textSection{
+    display: grid;
+    grid-area: text;
+    grid-template-columns: 100%;
+    grid-template-rows: .4fr 1fr .4fr .4fr;
+    padding: 100px 150px 100px 220px;
+}
+
+.title{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    align-self: center;
+    color: $DarkGrayRed;
+}
+
+.pink{
+    color: $DesaturatedRed;
+    font-weight: lighter;
+}
+
+.subTitle{
+    font-size: 1.4rem;
+    color: $DesaturatedRed;
+    padding-right: 200px;
+    line-height: 40px;
+}
+
+.emailForm{
+    width: 650px;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1520px) {
+    .main{
+        grid-template-columns: 50% 50%;
+    }
+
+    .textSection{
+        display: grid;
+        grid-area: text;
+        grid-template-columns: 100%;
+        grid-template-rows: .4fr 1fr .4fr .4fr;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .emailForm{
+        width: 70%;
+    }
+}
+
+  

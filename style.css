@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: url(./images/bg-pattern-desktop.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+form {
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+input[type=email] {
+  outline: none;
+  border: 1px solid #ce9797;
+  border-radius: 50px;
+  height: 60px;
+  width: 100%;
+  color: #ce9797;
+  padding-left: 30px;
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button[type=submit] {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #f5b6b6 0%, #f09393 100%);
+  width: 100px;
+  margin-left: -99px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-areas: "text image";
+}
+
+.imageSection {
+  grid-area: image;
+  height: 100vh;
+  justify-self: flex-end;
+}
+
+.heroImage {
+  height: 100%;
+  display: block;
+}
+
+.textSection {
+  display: grid;
+  grid-area: text;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.4fr 1fr 0.4fr 0.4fr;
+  padding: 100px 150px 100px 220px;
+}
+
+.title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  align-self: center;
+  color: #413a3a;
+}
+
+.pink {
+  color: #ce9797;
+  font-weight: lighter;
+}
+
+.subTitle {
+  font-size: 1.4rem;
+  color: #ce9797;
+  padding-right: 200px;
+  line-height: 40px;
+}
+
+.emailForm {
+  width: 650px;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1520px) {
+  .main {
+    grid-template-columns: 50% 50%;
+  }
+
+  .textSection {
+    display: grid;
+    grid-area: text;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.4fr 1fr 0.4fr 0.4fr;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 1270px) {
+  .emailForm {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
